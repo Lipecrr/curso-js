@@ -1,0 +1,108 @@
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
+      padding: 20px;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    h1 {
+      color: #333;
+    }
+
+    label {
+      display: block;
+      margin-top: 10px;
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+
+    input {
+      width: 300px;
+      padding: 8px;
+      margin-bottom: 10px;
+    }
+
+    button {
+      padding: 10px 20px;
+      background-color: #0a74da;
+      color: white;
+      border: none;
+      cursor: pointer;
+      border-radius: 8px;
+    }
+
+    button:hover {
+      background-color: #064f9a;
+    }
+
+    p {
+      color: #000;
+      font-size: 15px;
+    }
+
+    .resultado {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin-top: 20px;
+      background: white;
+      padding: 15px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    .resultado p {
+      margin-bottom: 50px;
+      margin-top: 5px;
+    }
+    .componente {
+      margin-bottom: 8px;
+    }
+
+    .total {
+      font-size: 1.2em;
+      font-weight: bold;
+      color: #0a74da;
+      margin-top: 10px;
+    }
+
+    .if,
+    .if-else,
+    .if-else-if {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .btn-voltar {
+      padding: 10px 20px;
+      background-color: #eb0942;
+      color: white;
+      border: none;
+      text-decoration: none;
+      border-radius: 8px;
+    }
+
+    .btn-voltar:hover {
+      background-color: #c40232;
+    }
+
+    .btn-home {
+      gap: 10px;
+    }
+
+    .btn-home a{
+      text-decoration: none;
+      color: #fff;
+    }
