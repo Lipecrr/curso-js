@@ -187,18 +187,18 @@ function exercicio04() {
 
     //let alturaX2 = altura * altura;
     let resultadoIMC = peso / (altura * altura);
-    let resultado = resultadoIMC.toFixed(2);
+    let resultado04 = resultadoIMC.toFixed(2);
 
     console.log(
         "Nome: " + nome +
         "\npeso: " + peso +
         "\naltura: " + altura +
-        "\n\nIMC do paciente: " + resultado);
+        "\n\nIMC do paciente: " + resultado04);
     alert(
         "Nome: " + nome +
         "\npeso: " + peso +
         "\naltura: " + altura +
-        "\n\nIMC do paciente: " + resultado);
+        "\n\nIMC do paciente: " + resultado04);
 
 }
 
