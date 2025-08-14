@@ -93,24 +93,23 @@ function exercicio14() {
     let numero2 = parseFloat(prompt("Digite o segundo número:").replace(",", "."));
     let numero3 = parseFloat(prompt("Digite o terceiro número:").replace(",", "."));
 
-
-    if (numero1 > numero2 && numero2 > numero3) {
+    if (numero1 >= numero2 && numero2 >= numero3) {
         alert(numero3 +
             "\n" + numero2 +
             "\n" + numero1);
-    } else if (numero1 > numero3 && numero3 > numero2) {
+    } else if (numero1 >= numero3 && numero3 >= numero2) {
         alert(numero2 +
             "\n" + numero3 +
             "\n" + numero1);
-    } else if (numero2 > numero1 && numero1 > numero3) {
+    } else if (numero2 >= numero1 && numero1 >= numero3) {
         alert(numero3 +
             "\n" + numero1 +
             "\n" + numero2);
-    } else if (numero2 > numero3 && numero3 > numero1) {
+    } else if (numero2 >= numero3 && numero3 >= numero1) {
         alert(numero1 +
             "\n" + numero3 +
             "\n" + numero2);
-    } else if (numero3 > numero1 && numero1 > numero2) {
+    } else if (numero3 >= numero1 && numero1 >= numero2) {
         alert(numero2 +
             "\n" + numero1 +
             "\n" + numero3);
@@ -253,7 +252,7 @@ function exercicio17() {
 }
 
 function exercicio18() {
-    let pegarHora = prompt("Digite a hora (horas:minutos:segundos):");
+    let pegarHora = prompt("Digite a hora (hh:mm:ss):");
     let partesHora = pegarHora.split(":");
     let hora = parseInt(partesHora[0]);
     let minuto = parseInt(partesHora[1]);
@@ -261,8 +260,8 @@ function exercicio18() {
     let horaT, minutoT, segundoT;
 
     if (hora === 0) {
-        horaT = "Zero hora, "
-    } else if (hora === 1) {
+        horaT = "Meia noite, "
+    } else if (hora === 1) {    
         hora = "Uma hora, "
     }
     else if (hora === 2) {
@@ -330,10 +329,8 @@ function exercicio18() {
     }
     else if (hora === 23) {
         horaT = "Vinte e três horas, "
-    } else if (hora === 24) {
-        horaT = "Meia noite, "
-    } else {
-        horaT = "Hora inválida, ";
+    }  else {
+        horaT = "(Hora inválida), ";
     }
 
     if (minuto === 0) {
@@ -457,7 +454,7 @@ function exercicio18() {
     } else if (minuto === 59) {
         minutoT = "cinquenta e nove minutos e ";
     } else {
-        minutoT = "minutos inválidos e ";
+        minutoT = "(minutos inválidos) e ";
     }
 
     if (segundo === 0) {
@@ -581,7 +578,7 @@ function exercicio18() {
     } else if (segundo === 59) {
         segundoT = "cinquenta e nove segundos.";
     } else {
-        segundoT = "segundos inválidos.";
+        segundoT = "(segundos inválidos).";
     }
 
     console.log(horaT + minutoT + segundoT);
