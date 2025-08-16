@@ -68,7 +68,7 @@ function exercicio09() {
     let numero3 = parseFloat(prompt("Digite o terceiro número:").replace(",", "."));
     let numero4 = parseFloat(prompt("Digite o quarto número:").replace(",", "."));
 
-    if (numero1 === numero2 && numero1 === numero3 && numero2 === numero3 && numero2 === numero4 && numero3 === numero4) {
+    if (numero1 === numero2 && numero2 === numero3 && numero3 === numero4) {
         alert("é um quadrado")
     } else {
         alert("não é um quadrado")

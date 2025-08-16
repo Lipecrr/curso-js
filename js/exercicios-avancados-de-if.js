@@ -30,13 +30,7 @@ function exercicio01() {
     } else {
         alert("Reprovado.");
         console.log("Reprovado.");
-
     }
-
-
-
-
-
 }
 
 function exercicio02() {
@@ -70,7 +64,6 @@ function exercicio02() {
 
     alert("Valor da compra original: R$ " + compra +
         "\nValor da compra com desconto: R$ " + valorFinal);
-
 }
 
 function exercicio03() {
@@ -91,7 +84,6 @@ function exercicio03() {
     }
 
     alert("Total a pagar: R$ " + valor.toFixed(2));
-
 }
 
 function exercicio04() {
@@ -112,5 +104,83 @@ function exercicio04() {
         }
     } else {
         alert("Triângulo inválido.");
+    }
+}
+
+function exercicio05() {
+    let x = parseFloat(prompt("Digite o valor de X:").replace(",", "."));
+    let y = parseFloat(prompt("Digite o valor de Y:").replace(",", "."));
+
+    if (x === 0 && y === 0) {
+        alert("Origem");
+    } else if (x === 0) {
+        alert("Eixo Y");
+    } else if (y === 0) {
+        alert("Eixo X");
+    } else if (x > 0 && y > 0) {
+        alert("Quadrante 1");
+    } else if (x < 0 && y > 0) {
+        alert("Quadrante 2");
+    } else if (x < 0 && y < 0) {
+        alert("Quadrante 3");
+    } else if (x > 0 && y < 0) {
+        alert("Quadrante 4");
+    }
+}
+
+function exercicio06() {
+    let media = parseFloat(prompt("Digite sua média:").replace(",", "."));
+    let renda = parseFloat(prompt("Digite sua renda Familiar:").replace(",", "."));
+    let moradores = parseInt(prompt("Digite quantas pessoas moram em sua casa:"));
+    let capita = renda / moradores;
+
+    if (media >= 8 && capita <= 1320) {
+        alert("Bolsa integral");
+    } else if (media >= 7 && capita <= 1980) {
+        alert("Bolsa parcial");
+    } else {
+        alert("Sem bolsa")
+    }
+}
+
+function exercicio07() {
+    let salario = parseFloat(prompt("Digite o salário:").replace(",", "."));
+    let tempoEmprego = parseInt(prompt("Digite em meses quantos tempo tem de emprego:"));
+    let valorParcela = parseFloat(prompt("Digite o valor da parcela:").replace(",", "."));
+    let negativado = prompt("Esta negativado (Sim ou Não):").toLowerCase().replace("ã", "a");
+
+    if (negativado === "nao" && tempoEmprego >= 6 && valorParcela <= 0.3 * salario) {
+        alert("Empréstimo aprovado.");
+    } else {
+        if (negativado === "sim") {
+            if (tempoEmprego >= 6 && valorParcela <= 0.3 * salario) {
+                alert("Empréstimo recusado por motivo de estar negativado.");
+            } else if (tempoEmprego < 6 && valorParcela <= 0.3 * salario) {
+                alert("Empréstimo recusado por motivo de estar negativado e tempo de empresa inferior a 6 meses.");
+            } else if (tempoEmprego >= 6 && valorParcela > 0.3 * salario) {
+                alert("Empréstimo recusado por motivo de estar negativado e valor da parcela maior que 30% do salario.");
+            } else if (tempoEmprego < 6 && valorParcela > 0.3 * salario) {
+                alert("Empréstimo recusado por motivo de estar negativado, tempo de empresa inferior a 6 meses e valor da parcela maior que 30% do salario.");
+            }
+        } else if (tempoEmprego < 6) {
+            if (negativado === "não" && valorParcela <= 0.3 * salario) {
+                alert("Empréstimo recusado por motivo de tempo de empresa inferior a 6 meses.");
+            } else if (negativado === "não" && valorParcela > 0.3 * salario) {
+                alert("Empréstimo recusado por motivo de tempo de empresa inferior a 6 meses e valor da parcela maior que 30% do salario.");
+            }
+        } else if (valorParcela > 0.3 * salario) {
+            alert("Empréstimo recusado por motivo de valor da parcela maior que 30% do salario.")
+        }
+    }
+}
+
+function exercicio08() {
+    let velocida = parseInt(prompt("Em qual velocidade o veiculo esta:"));
+    let limteVia = parseInt(prompt("Qual o limite da via:"));
+
+    if (velocida === limteVia){
+        alert("Dentro do limite.");
+    } else if (velocida > limteVia (1 - 0.20)){
+        
     }
 }
