@@ -89,6 +89,104 @@ function exercicio05() {
     }
 }
 
-function exercicio06(){
-    
+function exercicio06() {
+    let nome = "";
+    let nomes = "";
+    let quantidadeNomes = 0;
+
+    while (nome.toLowerCase() !== "fim") {
+        nome = prompt("Digite seu nome").trim();
+
+        if (nome.toLowerCase !== "fim") {
+            nomes = nomes + nome + "\n"
+
+            quantidadeNomes = quantidadeNomes + 1;
+        } else {
+        }
+    }
+
+    alert("Quantidade de nomes cadastrado: " + "\n" + nomes +
+        "\nQuantidade de nomes cadastrados: " + quantidadeNomes)
+}
+
+function exercicio07() {
+    let indice = 0;
+    let soma = 0;
+    let media = 0;
+
+    while (indice < 4) {
+        let preco = parseFloat(prompt("Digite o valor").toLowerCase.replace(",", ".").replace("R$", ""));
+
+        soma = soma + preco;
+        media = soma / indice;
+
+        indice = indice + 1;
+    }
+
+    alert("Valor total: R$ " + soma.toFixed(2) +
+        "\nMedia do valor: R$ " + media.toFixed(2))
+}
+
+function exercicio08() {
+    let indice = 0;
+    let pergunta = 0;
+    let naoPergunta = 0;
+
+    while (indice < 5) {
+        let frase = prompt("Digite uma frase").trim();
+
+        if (frase.toLowerCase().endsWith("?")) {
+            pergunta = pergunta + 1;
+        } else {
+            naoPergunta = naoPergunta + 1;
+        }
+        indice = indice + 1;
+    }
+    alert("Perguntas: " + pergunta +
+        "\nNão perguntas: " + naoPergunta
+    )
+}
+
+function exercicio09() {
+    let indice = 0;
+    let quantidadeVip = 0;
+    let quantidadeOff = 0;
+    let semAcesso = 0;
+
+    while (indice < 5) {
+        let acesso = prompt("Qual seu cupom").trim().toLowerCase();
+
+        if (acesso.startsWith("vip")) {
+            quantidadeVip = quantidadeVip + 1;
+        } else if (acesso.endsWith("off")) {
+            quantidadeOff = quantidadeOff + 1;
+        } else {
+            semAcesso = semAcesso + 1;
+        }
+
+        indice = indice + 1;
+    }
+    alert("Quantidade de acessos VIP: " + quantidadeVip +
+        "\nQuantidade de acesso OFF: " + quantidadeOff +
+        "\nQuantidade sem acesso: " + semAcesso
+    )
+}
+
+function exercicio10() {
+    let indice = 0;
+    let nomes = "";
+    let iniciais = "";
+    while (indice < 3) {
+        let nomeCompleto = prompt("Digite o nome completo").trim();
+        let partesNome = nomeCompleto.split(" ");
+        let primeiraLetra = partesNome[0].split("");
+        nomes = nomes + partesNome[0] + "\n";
+        iniciais = iniciais + primeiraLetra[0] + "\n"
+
+        indice = indice + 1;
+    }
+
+    alert("Lista de primeiro nome: \n" + nomes +
+        "\nIniciais: \n" + iniciais
+    )
 }

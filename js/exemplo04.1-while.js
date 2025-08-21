@@ -286,8 +286,8 @@ function exemploComVariasValidacoes() {
         }
     }
 
-    let indice = 0;
     while (indice < quantidadeDesejada) {
+        let indice = 0;
         let empresa = "";
         while (empresa.length < 3 || empresa.length > 120) {
             empresa = prompt("Digite o empresa").trim();
