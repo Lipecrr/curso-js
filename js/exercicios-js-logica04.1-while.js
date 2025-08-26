@@ -11,7 +11,6 @@ function exercicio01() {
         let produto = "";
         let valor = 0;
 
-
         while (produto.length < 2) {
             produto = prompt("Digite o produto").trim();
 
@@ -59,7 +58,6 @@ function exercicio02() {
             let nome = csvPartes[1].trim();
             let cpf = csvPartes[2];
             let data = csvPartes[3];
-
 
             if (id === "" || id <= 0) {
                 idV = idV + 1;
@@ -269,5 +267,97 @@ function exercicio07() {
 }
 
 function exercicio08() {
-    
+    let invalidos = 0;
+    let madrugada = 0;
+    let manha = 0;
+    let tarde = 0;
+    let noite = 0;
+
+    let indice = 0;
+    while (indice < 6) {
+        let pedirHora = prompt("Digite o horario (hh:mm)").trim();
+
+        if (pedirHora.length === 5 && pedirHora.charAt(2) === ":") {
+            let partes = pedirHora.split(":");
+            let hora = parseInt(partes[0]);
+            let minuto = parseInt(partes[1]);
+
+            if (hora >= 0 && hora <= 23 && minuto >= 0 && minuto <= 59) {
+                if (hora >= 0 && hora <= 4 && minuto >= 0 && minuto <= 59) {
+                    madrugada = madrugada + 1;
+                } else if (hora >= 5 && hora <= 11 && minuto >= 0 && minuto <= 59) {
+                    manha = manha + 1;
+                } else if (hora >= 12 && hora <= 17 && minuto >= 0 && minuto <= 59) {
+                    tarde = tarde + 1;
+                } else if (hora >= 18 && hora <= 23 && minuto >= 0 && minuto <= 59) {
+                    noite = noite + 1;
+                }
+            } else {
+                invalidos = invalidos + 1;
+            }
+        }
+        indice = indice + 1;
+    }
+    alert("Periodos:" +
+        "\nMadrugada: " + madrugada +
+        "\nManhã: " + manha +
+        "\nTarde: " + tarde +
+        "\nNoite: " + noite +
+        "\n\nInvalidos: " + invalidos
+    )
+}
+
+function exercicio09() {
+    let validos = 0;
+    let invalidos = 0;
+    let codigos = "";
+    let codigosInvalidos = "";
+
+    let indice = 0;
+    while (indice < 5) {
+        let codigo = prompt("Digite o código no formato (BLU-aaaa-nnnn)").trim();
+        let partes = codigo.split("-");
+        let prefixo = partes[0].toUpperCase();
+        let ano = partes[1];
+        let numero = partes[2].padStart(4, "0");
+
+        if (prefixo === "BLU") {
+            if (ano.length === 4 && parseInt(ano) >= 2000) {
+                codigos = codigos + prefixo + "-" + ano + "-" + numero + "\n";
+                validos = validos + 1;
+            } else {
+                invalidos = invalidos + 1;
+                codigosInvalidos = codigosInvalidos + prefixo + "-" + ano + "-" + numero + "\n";
+            }
+        } else {
+            invalidos = invalidos + 1;
+            codigosInvalidos = codigosInvalidos + prefixo + "-" + ano + "-" + numero + "\n";
+        }
+        indice = indice + 1;
+    }
+    alert("Validos: " + validos +
+        "\n" + codigos +
+        "\nInvalidos: " + invalidos +
+        "\n" + codigosInvalidos
+    )
+}
+
+function exercicio10() {
+    let usarname = "";
+    let id;
+    let nomes = "N            | Usarname\n";
+    nomes = nomes + "------------------------------------\n"
+
+    let indice = 0;
+    while (indice < 2) {
+        let nomeCompleto = prompt("Digite seu nome completo").trim().toLowerCase();
+        let partes = nomeCompleto.split(" ");
+
+        usarname = partes[0].charAt(0) + partes[partes.length - 1];
+        id = String(indice + 1).padStart(6, '0');
+        nomes = nomes + id + "   | " + usarname + "\n";
+
+        indice = indice + 1;
+    }
+    alert(nomes);
 }
