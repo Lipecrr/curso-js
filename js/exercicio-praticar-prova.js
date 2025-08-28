@@ -37,7 +37,7 @@ function exercicio13() {
     let jogadorMenorVermelho = "";
 
     let indice = 0;
-    while (indice < 22) {
+    while (indice < 2) {
         let nome = prompt("Digite o nome do jogador").trim();
         let idade = parseInt(prompt("Digite a idade do jogador"));
         let peso = parseFloat(prompt("Digite o peso do jogador").replace(",", "."));
@@ -105,8 +105,8 @@ function exercicio13() {
         indice = indice + 1;
     }
     console.log(
-        "Jogador com maior nome: " + maiorNome + "." +
-        "\nJagador com menor nome: " + menorNome + "." +
+        "Jogador com maior nome: " + maiorNome + ". " + maiorNome.length +
+        "\nJagador com menor nome: " + menorNome + ". " + menorNome.length +
         "\n\nJogador com maior idade: " + jogadorMaiorIdade + ", Com " + maiorIdade + " anos." +
         "\nJagador com menor idade: " + jogadorMenorIdade + ", Com " + menorIdade + " anos." +
         "\n\nJogador com maior peso: " + jogadorMaiorPeso + ", Com " + maiorPeso.toFixed(2) + "kg." +
@@ -121,5 +121,4 @@ function exercicio13() {
         "\n\nJagador com  a maior quantidade de cartões vermelho: " + jogadorMaiorVermelho + ", Com " + maiorCartoesVermelho + " cartões." +
         "\nJagador com  a menor quantidade de cartões vermelho: " + jogadorMenorVermelho + ", Com " + menorCartoesVermelho + " cartões."
     );
-
 }
