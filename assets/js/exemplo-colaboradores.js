@@ -131,3 +131,4 @@ let colaboradoresIdade = colaboradores.map(colaborador => {
 let colaboradoresDescontosAbaixo100 = colaboradores.filter(colaborador => colaborador.valor_descontos < 100);
 
 console.log(colaboradoresDescontosAbaixo100);
+
